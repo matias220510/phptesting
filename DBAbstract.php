@@ -19,7 +19,7 @@
 		abstract protected function delete(); 
 
 		private function open_connection(){
-			$this->mysqli = new mysqli(self::$host, self::$user, self::$pass, self::$db);
+			$this->mysqli = new mysqli(self::$host, self::$user, self::$pass, $this->$db);
 			if ($this->mysqli->connect_error) {
 				die('Connect Error: ' . $this->mysqli->connect_error);
 			}
